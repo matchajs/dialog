@@ -30,11 +30,11 @@ define(function(require, exports, module) {
                 targetPos: '50% 50%'
             },
 
-            // 基本的动画效果，可取值 'fade'(渐隐显示), 'slide'(滑动显示)，组合可取值 'fade slide'
+            // 基本的动画效果，可取值 'fade'(渐隐显示)
             effect: '',
 
             // 动画的持续时间
-            duration: 250
+            duration: 400
         },
 
         events: {
@@ -161,16 +161,15 @@ define(function(require, exports, module) {
         _onChangeVisible: function(val) {
             var self = this;
 
-            var displayFn = 'hide';
             if (val) {
                 if (self.get('effect')) {
-                    displayFn = 'fadeIn';
+                    self.$el.fadeIn(self.get('duration'));
                 } else {
-                    displayFn = 'show';
+                    self.$el.show();
                 }
+            } else {
+                self.$el.hide();
             }
-
-            self.$el[displayFn]();
         },
 
         _onChangeContent: function(val) {
