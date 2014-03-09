@@ -1,0 +1,17 @@
+{
+    "name": "dialog",
+    "version": "1.0.0",
+    "build": {
+        "output": {
+            "alert.js": ["alert.js", "dialog.js", "alert.tpl", "dialog.tpl"],
+            "confirm.js": ["confirm.js", "dialog.js", "confirm.tpl", "dialog.tpl"],
+            "prompt.js": ["prompt.js", "dialog.js", "prompt.tpl", "dialog.tpl"],
+            "tips.js": ["tips.js", "dialog.js", "tips.tpl", "dialog.tpl"],
+            "dialog.js": ["dialog.js", "dialog.tpl"]
+        },
+        "alias": {
+            "overlay": "matcha/overlay/1.0.0/overlay",
+            "mask": "matcha/mask/1.0.0/mask"
+        }
+    }
+}
